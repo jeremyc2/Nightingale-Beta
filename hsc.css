@@ -1,0 +1,76 @@
+.hsc > div {
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+    justify-content: center;
+  }
+  
+  .hsc > .hsc-text {
+    grid-column: column-start 1 / span 3;
+    grid-row: row-start 1 / span 1;
+    min-width: 0;
+    text-align: left;
+    font-size: 20px;
+    overflow: hidden;
+    padding: 22px;
+  }
+  
+  .hsc > .title {
+    grid-column: column-start 1 / span 3;
+    grid-row: 1 / row-start 1;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    font-size: 35px;
+    padding: 30px!important;
+    overflow: hidden;
+    color: rgb(181, 32, 22);
+    background-color: transparent;
+  }
+
+  .hscMoreInfo {
+    display: inline-flex;
+    grid-column: column-start 1 / span 3;
+    grid-row: row-start 2 / span 1;
+    border-radius: 10px;
+  }
+
+  .seeMore {
+    border-radius: 10px;
+    background-color: rgb(242, 242, 242);
+    font-size: 20px;
+    padding: 5px;
+    padding-top: 10px;
+    margin-right: 150px;
+    border:1px solid transparent;
+    cursor: pointer;
+  }
+
+  .hscMoreInfo > img {
+      height: 55px;
+      width: 142px;
+      border:1px solid transparent;
+      border-radius: 10px;
+      cursor: pointer;
+  }
+
+  .hscMoreInfo > *:active {
+    transform: scale(1.05);
+  }
+
+  .hscMoreInfo > *:hover {
+    border-color: black;
+    border-width: 2px;
+  }
+
+  .hsc > .image-share {
+    grid-column: column-start 2 / share-column;
+    grid-row: 1 / row-start 1;
+  }
+
+  .image-share {
+    z-index: 10;
+  }
+
+  .image-share > img:active {
+    transform: scale(1.1);
+  }

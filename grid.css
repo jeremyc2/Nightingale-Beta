@@ -1,0 +1,143 @@
+/*
+    Colors (main - opposite)
+    rgb(120,167,242) - rgb(242,195,120)
+*/
+
+header {
+  font-size: 70px;
+  background-color: rgb(120,167,242);
+  color: rgb(181, 32, 22);
+  font-family: didot;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 25px;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  padding: 10px;
+
+  background:
+  linear-gradient(to bottom, rgb(120,167,242) 0%, rgb(120,167,242) 90%, rgba(120,167,242,0) 95%, rgba(120,167,242,0) 100%),
+  linear-gradient(to right, rgb(235, 196, 131) 0%, rgb(235, 196, 131) 45%, rgb(172, 235, 155) 55%, rgb(172, 235, 155) 100%);
+  background-blend-mode: normal;
+}
+
+header > div > img {
+    height: 90px;
+    width: 65px;
+    cursor: pointer;
+}
+
+body,html {
+  padding: 0;
+  border-right: 0;
+  margin: 0;
+  width: 100vw;
+  font-family: "Open Sans"!important;
+
+  min-width:700px;        /* Suppose you want minimum width of 1000px */
+  width: auto !important;  /* Firefox will set width as auto */
+  width:700px;            /* As IE6 ignores !important it will set width as 1000px; */
+}
+
+.hsc { 
+  grid-column: 1 / end;
+  grid-row: 1 / row-start 1;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  margin: 20px;
+  
+  display: grid;
+  grid-template-columns: [column-start] 80px;
+  grid-template-rows: 100px [row-start] 215px [row-start] 70px [row-start];
+  grid-gap: 10px;
+  box-shadow: 0 4px 8px 0 rgba(99, 35, 35, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  background: 
+    linear-gradient( to right,
+      rgba(255, 255, 255, 0.8) 0%, 
+      rgba(255, 255, 255, 0.8) 60%, 
+      rgba(255, 255, 255, 0.5) 70%, 
+      rgba(255, 255, 255, 0.5) 100%
+    ),
+    /* bottom, image */
+
+    url(icons/images/princeroyce2.jpg) no-repeat,
+    url(icons/princeroyce2-repeatable2.jpg) repeat;
+}
+
+.grid-container-album-details {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  width: 800px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr [column-start]);
+  grid-template-rows: [row-start] 
+                      70px [title] 
+                      300px [album] 
+                      40px [song-list-label] 
+                      repeat(9, 50px [song-row]);
+  grid-gap: 10px;
+  grid-auto-flow: column;
+  align-items: center;
+
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  font-size: 12px;
+}
+
+.carousel1 { 
+  grid-column: 1 / end;
+  grid-row: row-start 1 / row-start 2;
+}
+.carousel2 { 
+  grid-column: 1 / end;
+  grid-row: row-start 2 / row-start 3;
+}
+
+.image-share > img {
+  cursor: pointer;
+}
+
+.carousel1, .carousel2 {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr [column-start]);
+    grid-template-rows: 35px [row-start] 1fr [row-start];
+    grid-gap: 10px;
+    justify-items: center;
+    grid-auto-flow: row;
+}
+
+.grid-container-main {
+  display: grid;
+  grid-template-columns: 1fr [col-start];
+  grid-template-rows: 1fr [row-start] repeat(2, 400px [row-start]);
+  grid-gap: 10px;
+  background-color: rgb(242, 242, 242);
+  width: 100%;
+  height: 100%;
+}
+
+.grid-container-main > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  justify-content: center;
+}

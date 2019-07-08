@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+  <link href="https://fonts.googleapis.com/css?family=Asap&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="grid.css" />
+  <link rel="stylesheet" type="text/css" href="modal.css" />
+  <link rel="stylesheet" type="text/css" href="album-details.css" />
+
+  <link rel="icon" href="icons/icon2-N.png"/>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script charset="utf-8" src="data.js"></script>
+  <script src="df album-details.js"></script>
+
+  <title>Album Details</title>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<header>
+  <div>
+     <img src="icons/icon2.png" onclick="location.href = 'index.html';" alt="">
+     <!-- <img src="icons/Fawkes-head-icon-saturated.svg" onclick="location.href = 'index.html';" alt=""> -->
+     Nightingale
+  </div>
+</header>
+<body onload="loadSongs()">
+    <div class="grid-container-album-details">
+        <div class="back">
+            <img src="icons/back/back arrow.svg" onclick="location.href = 'index.html';" 
+            onmouseover="mouseover(this,'icons/back/back arrow hover.svg')"
+            onmouseout="mouseout(this,'icons/back/back arrow.svg')"
+            onmousedown="mousedown(this,'icons/back/back arrow click.svg')"
+            onmouseup="mouseup(this,'icons/back/back arrow.svg','icons/back/back arrow hover.svg')"
+            alt="">
+        </div>
+        <div class="title">
+            
+        </div>
+        <div class="album">
+            <div class="image-share">
+                <img src="icons/share/Share icon.svg"
+                onmouseover="mouseover(this,'icons/share/Share icon hover.svg')"
+                onmouseout="mouseout(this,'icons/share/Share icon.svg')"
+                onclick="event.stopPropagation();showModal();" alt="">
+            </div>
+            <div class="album-art">
+                <img id="album-art" alt="">
+            </div>
+        </div>
+        <div class="song-list-label">
+            
+        </div>
+        <div class="song">
+            <strong>
+                
+            </strong>
+            <strong>
+                Songs
+            </strong>
+            <strong>
+                Artist
+            </strong>
+            <strong>
+                Length
+            </strong>
+            <strong>
+                Rating
+            </strong>
+            <strong>
+                Price
+            </strong>
+            <strong>
+                Add to Cart
+            </strong>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Share with a Friend</h4>
+        </div>
+        <div class="modal-body">
+            <div class="modal-body-row">
+                <div>
+                  <img src="icons/checkbox.svg" style="cursor: pointer;"
+                  onclick="alternate(this,'icons/checkbox-white-checked.svg','icons/checkbox.svg');"
+                  alt="">
+                </div>
+                <div>
+                  <img src="icons/icons8-person-female-64.png" alt="">
+                </div>
+                <div>
+                  Scarlett <br> Johansson
+                </div>
+            </div>
+            <div class="modal-body-row">
+                <div>
+                  <img src="icons/checkbox.svg" style="cursor: pointer;"
+                  onclick="alternate(this,'icons/checkbox-white-checked.svg','icons/checkbox.svg');"
+                  alt="">
+                </div>
+                <div>
+                  <img src="icons/icons8-user-80.png" alt="">
+                </div>
+                <div>
+                    Chris <br> Pratt
+                </div>
+            </div>
+            <div class="modal-body-row">
+                <div>
+                  <img src="icons/checkbox.svg" style="cursor: pointer;"
+                  onclick="alternate(this,'icons/checkbox-white-checked.svg','icons/checkbox.svg');"
+                  alt="">
+                </div>
+                <div>
+                  <img src="icons/icons8-user-80.png" alt="">
+                </div>
+                <div>
+                    Bernie <br> Sanders
+                </div>
+            </div>
+            <div class="modal-body-row">
+                <div>
+                  <img src="icons/checkbox.svg" style="cursor: pointer;"
+                  onclick="alternate(this,'icons/checkbox-white-checked.svg','icons/checkbox.svg');"
+                  alt="">
+                </div>
+                <div>
+                  <img src="icons/icons8-user-80.png" alt="">
+                </div>
+                <div>
+                    Kevin <br> Vallejo
+                </div>
+            </div>
+            <div class="modal-body-row">
+                <div>
+                  <img src="icons/checkbox.svg" style="cursor: pointer;"
+                  onclick="alternate(this,'icons/checkbox-white-checked.svg','icons/checkbox.svg');"
+                  alt="">
+                </div>
+                <div>
+                  <img src="icons/icons8-person-female-64.png" alt="">
+                </div>
+                <div>
+                    Oprah <br> Winfrey
+                </div>
+            </div>
+            <div class="modal-body-row">
+                <div>
+                  <img src="icons/checkbox.svg" style="cursor: pointer;"
+                  onclick="alternate(this,'icons/checkbox-white-checked.svg','icons/checkbox.svg');"
+                  alt="">
+                </div>
+                <div>
+                  <img src="icons/icons8-person-female-64.png" alt="">
+                </div>
+                <div>
+                    Paula <br> Abdul
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="modal-send">
+              <img src="icons/send/send.png" onclick="hideModal();" 
+              onmouseover="mouseover(this,'icons/send/send-hover.png')"
+              onmouseout="mouseout(this,'icons/send/send.png')"
+              onmousedown="mousedown(this,'icons/send/send-clicked.png')"
+              onmouseup="mouseup(this,'icons/send/send.png','icons/send/send-hover.png')"
+              alt="">
+            </div>
+            <div class="modal-cancel">
+              <img src="icons/cancel/cancel.png" onclick="hideModal();" 
+              onmouseover="mouseover(this,'icons/cancel/cancel-hover.png')"
+              onmouseout="mouseout(this,'icons/cancel/cancel.png')"
+              onmousedown="mousedown(this,'icons/cancel/cancel-clicked.png')"
+              onmouseup="mouseup(this,'icons/cancel/cancel.png','icons/cancel/cancel-hover.png')"
+              alt="">
+            </div>
+        </div>
+        </div>
+        
+    </div>
+    </div>
+    
+</div>

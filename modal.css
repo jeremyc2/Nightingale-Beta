@@ -1,0 +1,64 @@
+.modal-title {
+    text-align: center;
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr [column-start];
+    grid-auto-flow: column;
+    grid-gap: 10px;
+    height: 650px;
+    width: 300px;
+    margin: auto;
+}
+
+.modal-body-row {
+    grid-column: 1 / end;
+
+    display: grid;
+    grid-template-columns: 70px [checkbox] 70px [profile-pic] 1fr [name];
+    grid-gap: 10px;
+    height: 70px;
+}
+
+.modal-body-row > div > img {
+    height: 70px;
+    width: 70px;
+}
+
+.modal-body-row > div {
+    height: 70px;
+    display: grid;
+    align-items: center; 
+    justify-content: center;
+}
+
+.modal-footer {
+    display: grid;
+    grid-template-columns: 1fr [space] 120px [column-start] 120px [column-start] 1fr [space];
+    grid-template-rows: 1fr [row-start];
+    grid-gap: 10px;
+
+    height: 100px;
+}
+
+.modal-send {
+    grid-column: 2 / span 1;
+    grid-row: 1 / end;
+}
+
+.modal-send > img, .modal-cancel > img {
+    height: 60px;
+    cursor: pointer;
+}
+
+.modal-cancel {
+    grid-column: 3 / span 1;
+    grid-row: 1 / end;
+}
+
+.modal-cancel > img {
+    grid-column: 2 / end;
+    grid-row: 1 / end;
+    float: left;
+}

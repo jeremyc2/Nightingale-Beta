@@ -1,0 +1,85 @@
+body {
+    background-color: rgb(242,242,242)!important;
+}
+
+.grid-container-album-details > div {
+    text-align: center;
+    font-size: 12px;
+    justify-content: center;
+}
+
+.grid-container-album-details > .back {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    font-size: 30px;
+    padding-left: 15px;
+    padding-top: 50px;
+}
+
+.grid-container-album-details > .back > img {
+    float: left;
+    width: 100px;
+    cursor: pointer;
+}
+
+.grid-container-album-details > .title {
+    grid-column: 1 / end;
+    grid-row: 1 / title;
+    font-size: 30px;
+    color: rgb(181, 32, 22);
+}
+
+.grid-container-album-details > .album {
+    grid-column: column-start 1 / column-start 2;
+    grid-row: title / album;
+
+    display: grid;
+    grid-template-rows: 50px [start-row] 1fr;
+    grid-template-columns: 250px [column-start] 50px [column-start];
+}
+
+.grid-container-album-details > .album > .image-share {
+    z-index: 1000;
+    float: right;
+    grid-row: 1 / span 1;
+    grid-column: 2 / end;
+}
+
+.album > .album-art > img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.album > .album-art {
+    grid-row: 1 / end;
+    grid-column: 1 / end;
+}
+
+.image-share > img:active {
+    transform: scale(1.1);
+}
+
+.grid-container-album-details > .song-list-label {
+    grid-column: 1 / end;
+    grid-row: album / song-list-label;
+    font-size: 20px;
+    color: rgb(181, 32, 22);
+} 
+
+.grid-container-album-details > .song {
+    grid-column: 1 / end;
+
+    display: grid;
+    grid-template-columns: 50px [index] 
+                           100px [title] 
+                           100px [artist]
+                           100px [time] 
+                           100px [rating]
+                           100px [price]
+                           50px [cart];
+    grid-template-rows: 1fr [row-start];
+    grid-gap: 10px;
+    grid-auto-flow: row;
+    align-items: center;
+}

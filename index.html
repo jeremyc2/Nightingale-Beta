@@ -1,0 +1,246 @@
+<!-- git add .;git commit -m "change hightights"; git push origin master; -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+  <link href="https://fonts.googleapis.com/css?family=Asap&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="grid.css" />
+  <link rel="stylesheet" type="text/css" href="modal.css" />
+  <link rel="stylesheet" type="text/css" href="hsc.css" />
+  <link rel="stylesheet" type="text/css" href="carousel.css" />
+  <link rel="icon" href="icons/icon2-N.png"/>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script charset="utf-8" src="data.js"></script>
+  <script src="df index.js"></script>
+
+  <title>Nightingale</title>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<header>
+  <div>
+      <img src="icons/icon2.png" alt="">
+     <!-- <img src="icons/Fawkes-head-icon-saturated.svg" alt=""> -->
+     Nightingale
+  </div>
+</header>
+<body onload="resizeCarousels();">
+  <div class="grid-container-main">
+    <div class="hsc">
+      <div class="image-share">
+        <img src="icons/share/Share icon.svg" 
+          onmouseover="mouseover(this,'icons/share/Share icon hover.svg')"
+          onmouseout="mouseout(this,'icons/share/Share icon.svg')"
+          onclick="showModal();" alt="">
+      </div>
+      <div class="title">
+        Defining Bachata
+      </div>
+      <div class="hsc-text">
+          &emsp;&emsp;&emsp;Geoffrey Royce Rojas, known
+          professionally as Prince Royce, is an
+          American singer and songwriter of
+          Dominican descent. At an early age,
+          Royce took an interest in music, and in
+          his teenage years began experimenting
+          with music and writing poetry. By age
+          nineteen, Royce met Andrés Hidalgo, who
+          became his manager.
+          On November 24, 2014, Royce released
+          "Stuck on a Feeling" featuring Snoop
+          Dogg as the first single from his
+          fourth studio album, Double Vision.
+          The single is Royce's best-performing
+          single in the United States to date,
+          having reached number forty-three on
+          the Billboard Hot 100. In early
+          2015, he contributed the song "My
+          Angel" to the soundtrack album for the
+          blockbuster film Furious 7. In
+          March 2015, it was announced that Royce
+          would join Ariana Grande's The
+          Honeymoon Tour as the opening act for
+          40 dates in the United States.
+          Royce's first album primarily in the
+          English language, Double Vision was
+          released on July 24, 2015, preceded
+          by the album's second single, "Back It
+          Up" featuring Jennifer Lopez and
+          Pitbull, which was released in May
+          2015. The single reached number ten
+          on the US Latin Pop Songs chart and
+          number ninety-two on the Billboard Hot
+          100. The Spanish-language version of
+          the song was nominated for the Latin
+          Grammy Award for Best Urban Song,
+          making Royce an eight-time Latin
+          Grammy-nominated performer.
+      </div>
+      <div class="hscMoreInfo">
+        <div class="seeMore" onclick="location.href = 'album-details.html?album=princeRoyceTopSongs';">Explore Playlist</div>
+        <img src="icons/wikipedia-source.png" onclick="location.href = 'https\:\/\/en.wikipedia.org/wiki/Prince_Royce';" alt="">
+      </div>
+    </div> 
+    <div class="carousel1">
+          <div id="back-carousel" class="arrow-c">
+              <img src="icons/arrow/back-carousel.svg" 
+                onmouseover="mouseover(this,'icons/arrow/back-carousel hover.svg')"
+                onmouseout="mouseout(this,'icons/arrow/back-carousel.svg')"
+                onmousedown="mousedown(this,'icons/arrow/back-carousel clicked.svg')"
+                onmouseup="mouseup(this,'icons/arrow/back-carousel.svg','icons/arrow/back-carousel hover.svg');resizeCarousels(-1);"
+              alt="">
+          </div>
+          <div class="shaddow-box-c">
+          </div>
+          <div id="forward-carousel" class="arrow-c">
+            <img src="icons/arrow/forward-carousel.svg" 
+              onmouseover="mouseover(this,'icons/arrow/forward-carousel hover.svg')"
+              onmouseout="mouseout(this,'icons/arrow/forward-carousel.svg')"
+              onmousedown="mousedown(this,'icons/arrow/forward-carousel clicked.svg')"
+              onmouseup="mouseup(this,'icons/arrow/forward-carousel.svg','icons/arrow/forward-carousel hover.svg');resizeCarousels(1);"
+            alt="">
+          </div>
+    </div>
+    <div class="carousel2">
+        <div id="back-carousel" class="arrow-c">
+          <img src="icons/arrow/back-carousel.svg" 
+            onmouseover="mouseover(this,'icons/arrow/back-carousel hover.svg')"
+            onmouseout="mouseout(this,'icons/arrow/back-carousel.svg')"
+            onmousedown="mousedown(this,'icons/arrow/back-carousel clicked.svg')"
+            onmouseup="mouseup(this,'icons/arrow/back-carousel.svg','icons/arrow/back-carousel hover.svg');resizeCarousels(null,-1);"
+          alt="">
+        </div>
+        <div class="shaddow-box-c">
+        </div>
+        <div id="forward-carousel" class="arrow-c">
+            <img src="icons/arrow/forward-carousel.svg" 
+              onmouseover="mouseover(this,'icons/arrow/forward-carousel hover.svg')"
+              onmouseout="mouseout(this,'icons/arrow/forward-carousel.svg')"
+              onmousedown="mousedown(this,'icons/arrow/forward-carousel clicked.svg')"
+              onmouseup="mouseup(this,'icons/arrow/forward-carousel.svg','icons/arrow/forward-carousel hover.svg');resizeCarousels(null,1);"
+            alt="">
+        </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Share with a Friend</h4>
+        </div>
+        <div class="modal-body">
+            <div class="modal-body-row">
+                <div>
+                  <img src="icons/checkbox.svg" style="cursor: pointer;"
+                  onclick="alternate(this,'icons/checkbox-white-checked.svg','icons/checkbox.svg');"
+                  alt="">
+                </div>
+                <div>
+                  <img src="icons/icons8-person-female-64.png" alt="">
+                </div>
+                <div>
+                  Scarlett <br> Johansson
+                </div>
+            </div>
+            <div class="modal-body-row">
+                <div>
+                  <img src="icons/checkbox.svg" style="cursor: pointer;"
+                  onclick="alternate(this,'icons/checkbox-white-checked.svg','icons/checkbox.svg');"
+                  alt="">
+                </div>
+                <div>
+                  <img src="icons/icons8-user-80.png" alt="">
+                </div>
+                <div>
+                    Chris <br> Pratt
+                </div>
+            </div>
+            <div class="modal-body-row">
+                <div>
+                  <img src="icons/checkbox.svg" style="cursor: pointer;"
+                  onclick="alternate(this,'icons/checkbox-white-checked.svg','icons/checkbox.svg');"
+                  alt="">
+                </div>
+                <div>
+                  <img src="icons/icons8-user-80.png" alt="">
+                </div>
+                <div>
+                    Bernie <br> Sanders
+                </div>
+            </div>
+            <div class="modal-body-row">
+                <div>
+                  <img src="icons/checkbox.svg" style="cursor: pointer;"
+                  onclick="alternate(this,'icons/checkbox-white-checked.svg','icons/checkbox.svg');"
+                  alt="">
+                </div>
+                <div>
+                  <img src="icons/icons8-user-80.png" alt="">
+                </div>
+                <div>
+                    Kevin <br> Vallejo
+                </div>
+            </div>
+            <div class="modal-body-row">
+                <div>
+                  <img src="icons/checkbox.svg" style="cursor: pointer;"
+                  onclick="alternate(this,'icons/checkbox-white-checked.svg','icons/checkbox.svg');"
+                  alt="">
+                </div>
+                <div>
+                  <img src="icons/icons8-person-female-64.png" alt="">
+                </div>
+                <div>
+                    Oprah <br> Winfrey
+                </div>
+            </div>
+            <div class="modal-body-row">
+                <div>
+                  <img src="icons/checkbox.svg" style="cursor: pointer;"
+                  onclick="alternate(this,'icons/checkbox-white-checked.svg','icons/checkbox.svg');"
+                  alt="">
+                </div>
+                <div>
+                  <img src="icons/icons8-person-female-64.png" alt="">
+                </div>
+                <div>
+                    Paula <br> Abdul
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="modal-send">
+              <img src="icons/send/send.png" onclick="hideModal();" 
+              onmouseover="mouseover(this,'icons/send/send-hover.png')"
+              onmouseout="mouseout(this,'icons/send/send.png')"
+              onmousedown="mousedown(this,'icons/send/send-clicked.png')"
+              onmouseup="mouseup(this,'icons/send/send.png','icons/send/send-hover.png')"
+              alt="">
+            </div>
+            <div class="modal-cancel">
+              <img src="icons/cancel/cancel.png" onclick="hideModal();" 
+              onmouseover="mouseover(this,'icons/cancel/cancel-hover.png')"
+              onmouseout="mouseout(this,'icons/cancel/cancel.png')"
+              onmousedown="mousedown(this,'icons/cancel/cancel-clicked.png')"
+              onmouseup="mouseup(this,'icons/cancel/cancel.png','icons/cancel/cancel-hover.png')"
+              alt="">
+            </div>
+        </div>
+        </div>
+        
+    </div>
+    </div>
+    
+</div>
