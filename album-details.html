@@ -77,12 +77,12 @@
             </strong>
         </div>
     </div>
-    <img src=icons/View-Cart/view-cart.png class="cart-view">
+    <img src=icons/View-Cart/view-cart.png class="cart-view" onclick="showCart();">
 
 </body>
 </html>
 
-<!-- Modal -->
+<!-- Share Modal -->
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
@@ -195,4 +195,52 @@
     </div>
     </div>
     
+</div>
+
+
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal" role="dialog">
+  <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Cart</h4>
+      </div>
+      <div class="modal-body">
+          <div class="modal-body-row">
+
+          </div>
+          <div class="modal-body-row">
+ 
+          </div>
+          <div class="modal-body-row">
+ 
+          </div>
+          <div class="modal-body-row">
+    
+          </div>
+          <div class="modal-body-row">
+     
+          </div>
+          <div class="modal-body-row">
+
+          </div>
+      </div>
+      <div class="modal-footer">
+          <div class="modal-cancel">
+            <img src="icons/cancel/cancel.png" onclick="hideCart();" 
+            onmouseover="mouseover(this,'icons/cancel/cancel-hover.png')"
+            onmouseout="mouseout(this,'icons/cancel/cancel.png')"
+            onmousedown="mousedown(this,'icons/cancel/cancel-clicked.png')"
+            onmouseup="mouseup(this,'icons/cancel/cancel.png','icons/cancel/cancel-hover.png')"
+            alt="">
+          </div>
+      </div>
+      </div>
+      
+  </div>
+  </div>
+  
 </div>

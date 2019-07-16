@@ -40,3 +40,11 @@ function showModal() {
 function hideModal() {
     $('#myModal').modal('hide');
 }
+
+function showCart() {
+    $('#cartModal').modal('show');
+}
+
+function hideCart() {
+    $('#cartModal').modal('hide');
+}
