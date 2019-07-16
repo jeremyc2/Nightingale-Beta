@@ -116,7 +116,7 @@ function loadSongs() {
                                     delete cart[title.innerHTML]
                                 }
                                 else {
-                                    cart[title.innerHTML] = title.innerHTML + ";" + artist.innerHTML + ";" + price.innerHTML + ";" + document.getElementById("album-art").src;
+                                    cart[title.innerHTML + artist.innerHTML] = title.innerHTML + ";" + artist.innerHTML + ";" + price.innerHTML + ";" + document.getElementById("album-art").src;
                                 }
                                 // console.log(cart)
                             };
