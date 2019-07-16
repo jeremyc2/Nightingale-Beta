@@ -44,6 +44,19 @@ body,html {
   width:700px;            /* As IE6 ignores !important it will set width as 1000px; */
 }
 
+.cart-view {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  cursor: pointer;
+
+  height: 100px;
+  width: 100px;
+  z-index: 1000;
+
+}
+
 .hsc { 
   grid-column: 1 / end;
   grid-row: 1 / row-start 1;
