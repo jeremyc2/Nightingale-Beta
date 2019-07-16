@@ -5,10 +5,16 @@
 .modal-body {
     display: grid;
     grid-template-columns: 1fr [column-start];
-    grid-auto-flow: row;
     grid-gap: 10px;
-    height: 650px;
     width: 300px;
+    margin: auto;
+}
+
+.cart-modal-body {
+    display: grid;
+    grid-template-columns: 1fr [column-start];
+    grid-gap: 10px;
+    width: 340px;
     margin: auto;
 }
 
@@ -19,6 +25,15 @@
     grid-template-columns: 70px [checkbox] 70px [profile-pic] 1fr [name];
     grid-gap: 10px;
     height: 70px;
+}
+
+.modal-cart-row {
+    grid-column: 1 / end;
+
+    display: grid;
+    grid-template-columns: 70px [title] 70px [artist] 70px [price] 100px [album];
+    grid-gap: 10px;
+    height: 100px;
 }
 
 .modal-body-row > div > img {
@@ -33,6 +48,10 @@
     justify-content: center;
 }
 
+.modal-header {
+    margin-bottom: 10px;
+}
+
 .modal-footer {
     display: grid;
     grid-template-columns: 1fr [space] 120px [column-start] 120px [column-start] 1fr [space];
@@ -40,6 +59,7 @@
     grid-gap: 10px;
 
     height: 100px;
+    margin-top: 10px;
 }
 
 .modal-send {

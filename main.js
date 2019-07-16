@@ -64,6 +64,7 @@ function showCart() {
         var array = item.split(";");
 
         var row = document.createElement("div");
+        row.className = "modal-cart-row";
 
         var title = document.createElement("div");
         var artist = document.createElement("div");
