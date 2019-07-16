@@ -38,6 +38,27 @@ function getAlbumInformation() {
 
 }
 
+function cartMouseUp(element) {
+    if (element.className == 'shopping-green') 
+        element.className = 'shopping-blue'; 
+    else 
+        element.className = 'shopping-green';
+    mouseup(element, 'icons/' + element.className + '/' + element.className + '.svg',
+        'icons/' + element.className + '/' + element.className + ' hover.svg');
+    var price = element.parentNode.previousSibling;
+    var artist = price.previousSibling.previousSibling.previousSibling;
+    var title = artist.previousSibling;
+    // console.log(price.innerHTML + " " + artist.innerHTML + " " + title.innerHTML + " " + document.getElementById("album-art").src)
+
+    if (title.innerHTML + artist.innerHTML in cart) {
+        delete cart[title.innerHTML + artist.innerHTML]
+    }
+    else {
+        cart[title.innerHTML + artist.innerHTML] = title.innerHTML + ";" + artist.innerHTML + ";" + price.innerHTML + ";" + document.getElementById("album-art").src;
+    }
+    // console.log(cart)
+}
+
 function loadSongs() {
 
     var album = getAlbumInformation();
@@ -101,25 +122,10 @@ function loadSongs() {
                                 mousedown(this,'icons/' + this.className + '/' + this.className + ' clicked.svg')
                             };
         imgNode.onmouseup= function(){
-                                if (this.className == 'shopping-green') 
-                                    this.className = 'shopping-blue'; 
-                                else 
-                                    this.className = 'shopping-green';
-                                mouseup(this, 'icons/' + this.className + '/' + this.className + '.svg',
-                                    'icons/' + this.className + '/' + this.className + ' hover.svg');
-                                var price = this.parentNode.previousSibling;
-                                var artist = price.previousSibling.previousSibling.previousSibling;
-                                var title = artist.previousSibling;
-                                // console.log(price.innerHTML + " " + artist.innerHTML + " " + title.innerHTML + " " + document.getElementById("album-art").src)
-
-                                if (title.innerHTML in cart) {
-                                    delete cart[title.innerHTML]
-                                }
-                                else {
-                                    cart[title.innerHTML + artist.innerHTML] = title.innerHTML + ";" + artist.innerHTML + ";" + price.innerHTML + ";" + document.getElementById("album-art").src;
-                                }
-                                // console.log(cart)
+                                cartMouseUp(this);
                             };
+
+        imgNode.id = titleNode.innerHTML + artistNode.innerHTML;
 
         // Append img to cart node
         cartNode.appendChild(imgNode);

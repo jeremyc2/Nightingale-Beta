@@ -28,7 +28,7 @@
      Nightingale
   </div>
 </header>
-<body onload="resizeCarousels();">
+<body onload="resizeCarousels();buildCart();">
   <div class="grid-container-main">
     <div class="hsc">
       <div class="image-share">
@@ -80,7 +80,7 @@
           Grammy-nominated performer.
       </div>
       <div class="hscMoreInfo">
-        <div class="seeMore" onclick="location.href = 'album-details.html?album=princeRoyceTopSongs';">Explore Playlist</div>
+        <div class="seeMore" onclick="location.href = 'album-details.html?album=princeRoyceTopSongs&cart=' + buildCartString();">Explore Playlist</div>
         <img src="icons/wikipedia-source.png" onclick="location.href = 'https\:\/\/en.wikipedia.org/wiki/Prince_Royce';" alt="">
       </div>
     </div> 

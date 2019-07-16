@@ -21,15 +21,15 @@
 </head>
 <header>
   <div>
-     <img src="icons/icon2.png" onclick="location.href = 'index.html';" alt="">
+     <img src="icons/icon2.png" onclick="location.href = 'index.html?cart=' + buildCartString();" alt="">
      <!-- <img src="icons/Fawkes-head-icon-saturated.svg" onclick="location.href = 'index.html';" alt=""> -->
      Nightingale
   </div>
 </header>
-<body onload="loadSongs()">
+<body onload="loadSongs();buildCart();">
     <div class="grid-container-album-details">
         <div class="back">
-            <img src="icons/back/back arrow.svg" onclick="location.href = 'index.html';" 
+            <img src="icons/back/back arrow.svg" onclick="location.href = 'index.html?cart='+ buildCartString();" 
             onmouseover="mouseover(this,'icons/back/back arrow hover.svg')"
             onmouseout="mouseout(this,'icons/back/back arrow.svg')"
             onmousedown="mousedown(this,'icons/back/back arrow click.svg')"
