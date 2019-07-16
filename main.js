@@ -1,5 +1,13 @@
 var mouseIn = false;
 
+function getUrlVars() {
+    var vars = {};
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = decodeURIComponent(value);
+    });
+    return vars;
+}
+
 function mouseover(element, filename) {
     mouseIn = true;
     element.src = filename;
