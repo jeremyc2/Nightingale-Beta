@@ -63,6 +63,8 @@ function showCart() {
 
         var array = item.split(";");
 
+        var row = document.createElement("div");
+
         var title = document.createElement("div");
         var artist = document.createElement("div");
         var price = document.createElement("div");
@@ -76,10 +78,12 @@ function showCart() {
         price.innerHTML = array[2];
         albumArt.src = array[3];
 
-        cartElement.appendChild(title);
-        cartElement.appendChild(artist);
-        cartElement.appendChild(price);
-        cartElement.appendChild(albumArt);
+        row.appendChild(title);
+        row.appendChild(artist);
+        row.appendChild(price);
+        row.appendChild(albumArt);
+
+        cartElement.appendChild(row);
 
     }); 
     

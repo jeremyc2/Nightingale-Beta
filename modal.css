@@ -5,7 +5,7 @@
 .modal-body {
     display: grid;
     grid-template-columns: 1fr [column-start];
-    grid-auto-flow: column;
+    grid-auto-flow: row;
     grid-gap: 10px;
     height: 650px;
     width: 300px;
