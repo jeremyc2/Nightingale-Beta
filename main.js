@@ -40,7 +40,6 @@ function buildCart() {
         var topArray = cartString.split("\\");
 
         topArray.forEach(function (item, index) {
-            console.log(item, index);
 
             insertCart(item);
 
@@ -98,7 +97,6 @@ function insertCart(item) {
 
     var cartButton = document.getElementById(array[0] + array[1]);
 
-    console.log(cartButton);
 
     if (cartButton) {
         cartMouseUp(cartButton);
@@ -106,7 +104,6 @@ function insertCart(item) {
 
     if (array[0]) {
         cart[array[0] + array[1]] = array[0] + ";" + array[1] + ";" + array[2] + ";" + array[3];
-        console.log("TEST: ", cart[array[0] + array[1]])
     }
 }
 
