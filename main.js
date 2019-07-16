@@ -1,5 +1,7 @@
 var mouseIn = false;
 
+var cart = [];
+
 function getUrlVars() {
     var vars = {};
     window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {

@@ -107,6 +107,18 @@ function loadSongs() {
                                     this.className = 'shopping-green';
                                 mouseup(this, 'icons/' + this.className + '/' + this.className + '.svg',
                                     'icons/' + this.className + '/' + this.className + ' hover.svg');
+                                var price = this.parentNode.previousSibling;
+                                var artist = price.previousSibling.previousSibling.previousSibling;
+                                var title = artist.previousSibling;
+                                console.log(price.innerHTML + " " + artist.innerHTML + " " + title.innerHTML + " " + document.getElementById("album-art").src)
+
+                                if (title.innerHTML in cart) {
+                                    delete cart[title.innerHTML]
+                                }
+                                else {
+                                    cart[title.innerHTML] = artist.innerHTML + ";" + price.innerHTML + ";" + document.getElementById("album-art").src;
+                                }
+                                console.log(cart)
                             };
 
         // Append img to cart node
