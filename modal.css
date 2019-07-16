@@ -58,7 +58,5 @@
 }
 
 .modal-cancel > img {
-    grid-column: 2 / end;
-    grid-row: 1 / end;
     float: left;
 }
