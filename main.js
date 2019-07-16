@@ -52,6 +52,38 @@ function hideModal() {
 }
 
 function showCart() {
+
+    var cartElement = document.getElementById("cart")
+    cartElement.innerHTML = "";
+
+
+    Object.keys(cart).forEach(function(key) {
+        var item = cart[key];
+
+
+        var array = item.split(";");
+
+        var title = document.createElement("div");
+        var artist = document.createElement("div");
+        var price = document.createElement("div");
+        var albumArt = document.createElement("img");
+
+        albumArt.width = "100";
+        albumArt.height = "100";
+
+        title.innerHTML = array[0];
+        artist.innerHTML = array[1];
+        price.innerHTML = array[2];
+        albumArt.src = array[3];
+
+        cartElement.appendChild(title);
+        cartElement.appendChild(artist);
+        cartElement.appendChild(price);
+        cartElement.appendChild(albumArt);
+
+    }); 
+    
+
     $('#cartModal').modal('show');
 }
 
