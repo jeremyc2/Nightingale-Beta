@@ -110,15 +110,15 @@ function loadSongs() {
                                 var price = this.parentNode.previousSibling;
                                 var artist = price.previousSibling.previousSibling.previousSibling;
                                 var title = artist.previousSibling;
-                                console.log(price.innerHTML + " " + artist.innerHTML + " " + title.innerHTML + " " + document.getElementById("album-art").src)
+                                // console.log(price.innerHTML + " " + artist.innerHTML + " " + title.innerHTML + " " + document.getElementById("album-art").src)
 
                                 if (title.innerHTML in cart) {
                                     delete cart[title.innerHTML]
                                 }
                                 else {
-                                    cart[title.innerHTML] = artist.innerHTML + ";" + price.innerHTML + ";" + document.getElementById("album-art").src;
+                                    cart[title.innerHTML] = title.innerHTML + ";" + artist.innerHTML + ";" + price.innerHTML + ";" + document.getElementById("album-art").src;
                                 }
-                                console.log(cart)
+                                // console.log(cart)
                             };
 
         // Append img to cart node
