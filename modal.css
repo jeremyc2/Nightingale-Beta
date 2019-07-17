@@ -48,6 +48,12 @@
     justify-content: center;
 }
 
+.modal-cart-row > div {
+    display: grid;
+    align-items: center; 
+    justify-content: center;
+}
+
 .modal-header {
     margin-bottom: 10px;
 }
