@@ -138,7 +138,7 @@ function loadCarousel(index, playlist, maxSize, deltaLeftOffset) {
         var title = playlist.songs[i].title;
         songNode.title = title;
         songNode.onclick = function() {
-            location.href = 'album-details.html?album=' + this.title + "&cart=" + buildCartString;
+            location.href = 'album-details.html?album=' + this.title + "&cart=" + buildCartString();
         }
         
         var albumImageNode = document.createElement("img");
